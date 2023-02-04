@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Room system added">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/NodeApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/ResidentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/RoomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Duty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Resident.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/RoomStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/UserState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/MainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ProducerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ResidentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/RoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/TgProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/enums/ChatCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ConsumerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/MainServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ProducerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ResidentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/RoomServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/TgProcessingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/AnswerTemplates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/ErrorTemplates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/TextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/Че делать то.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-queues/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-queues/src/main/java/org/dompurrr/RabbitQueues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/TelegramDispatcherApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/TelegramBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/UpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/AnswerConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/UpdateProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/AnswerConsumerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/UpdateProducerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/utils/MessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/log4j.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2KTMr1F5wwOx1ApowuMcDbiLFRP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ee660709a5697c2edb1fd152766b2a07&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.NodeApplication">
+    <configuration name="NodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="node" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dompurrr.NodeApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dompurrr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TelegramDispatcherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tg-dispatcher" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dompurrr.TelegramDispatcherApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dompurrr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.TelegramDispatcherApplication" />
+      <item itemvalue="Spring Boot.NodeApplication" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="" />
+      <created>1673994319881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673994319881</updated>
+      <workItem from="1673994320128" duration="2806000" />
+      <workItem from="1674330988149" duration="2055000" />
+      <workItem from="1674384160233" duration="15175000" />
+      <workItem from="1674421433507" duration="8267000" />
+      <workItem from="1674461863993" duration="606000" />
+      <workItem from="1674476028388" duration="10180000" />
+      <workItem from="1674504560766" duration="790000" />
+      <workItem from="1674506247813" duration="10019000" />
+      <workItem from="1674549474449" duration="4843000" />
+      <workItem from="1674739092159" duration="1737000" />
+      <workItem from="1674840319123" duration="2263000" />
+      <workItem from="1674849187518" duration="1212000" />
+      <workItem from="1675105248427" duration="4569000" />
+      <workItem from="1675138168331" duration="28000" />
+      <workItem from="1675178478313" duration="8420000" />
+      <workItem from="1675319166063" duration="11487000" />
+      <workItem from="1675410838707" duration="15926000" />
+      <workItem from="1675445144911" duration="12545000" />
+      <workItem from="1675489119344" duration="2987000" />
+      <workItem from="1675494384219" duration="5223000" />
+      <workItem from="1675507951206" duration="8296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Room system added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Room system added" />
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>
