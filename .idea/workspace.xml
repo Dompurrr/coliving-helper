@@ -5,60 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Room system added">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/NodeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/ResidentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/RoomDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Duty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Resident.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/RoomStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/UserState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/MainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ProducerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/ResidentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/RoomService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/TgProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/enums/ChatCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ConsumerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ProducerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ResidentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/RoomServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/TgProcessingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/AnswerTemplates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/ErrorTemplates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/TextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/first.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/Че делать то.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-queues/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-queues/src/main/java/org/dompurrr/RabbitQueues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/TelegramDispatcherApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/TelegramBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/UpdateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/AnswerConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/UpdateProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/AnswerConsumerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/UpdateProducerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/utils/MessageUtils.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -194,8 +149,16 @@
       <workItem from="1675445144911" duration="12545000" />
       <workItem from="1675489119344" duration="2987000" />
       <workItem from="1675494384219" duration="5223000" />
-      <workItem from="1675507951206" duration="8296000" />
+      <workItem from="1675507951206" duration="10450000" />
     </task>
+    <task id="LOCAL-00001" summary="Room system added">
+      <created>1675517428723</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675517428723</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +169,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="devAndTest" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
