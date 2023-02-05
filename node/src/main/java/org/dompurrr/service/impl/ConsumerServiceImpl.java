@@ -2,7 +2,6 @@ package org.dompurrr.service.impl;
 
 import lombok.extern.log4j.Log4j;
 import org.dompurrr.service.ConsumerService;
-import org.dompurrr.service.ProducerService;
 import org.dompurrr.service.TgProcessingService;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -14,11 +13,9 @@ import static org.dompurrr.RabbitQueues.*;
 @Component
 public class ConsumerServiceImpl implements ConsumerService {
     private final TgProcessingService tgProcessingService;
-    private final ProducerService producerService;
 
-    public ConsumerServiceImpl(TgProcessingService tgProcessingService, ProducerService producerService) {
+    public ConsumerServiceImpl(TgProcessingService tgProcessingService) {
         this.tgProcessingService = tgProcessingService;
-        this.producerService = producerService;
     }
 
     @Override

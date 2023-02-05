@@ -13,26 +13,28 @@ import org.dompurrr.utils.AnswerTemplates;
 import org.dompurrr.utils.ErrorTemplates;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
+import java.util.Map;
+
+import static java.util.Map.entry;
 
 @Log4j
 @Component
 public class MainServiceImpl  implements MainService {
 
-    private final HashMap<String, ChatCommands> commandMap = new HashMap<>(){{
-        put("/start", ChatCommands.START);
-        put("/help", ChatCommands.HELP);
-        put("/register", ChatCommands.REGISTRATION);
-        put("/info", ChatCommands.INFO);
-        put("/changeName", ChatCommands.CHANGE_NAME);
-        put("/cancel", ChatCommands.CANCEL);
-        put("/room", ChatCommands.ROOM);
-        put("/addUser", ChatCommands.ADD_ROOM);
-        put("/removeUser", ChatCommands.REMOVE_ROOM);
-        put("/deleteRoom", ChatCommands.DELETE_ROOM);
-        put("/joinRoom", ChatCommands.JOIN_ROOM);
-        put("/inviteToRoom", ChatCommands.INVITE_ROOM);
-    }};
+    private static final Map<String, ChatCommands> commandMap = Map.ofEntries(
+            entry("/start", ChatCommands.START),
+            entry("/help", ChatCommands.HELP),
+            entry("/register", ChatCommands.REGISTRATION),
+            entry("/info", ChatCommands.INFO),
+            entry("/changeName", ChatCommands.CHANGE_NAME),
+            entry("/cancel", ChatCommands.CANCEL),
+            entry("/room", ChatCommands.ROOM),
+            entry("/addUser", ChatCommands.ADD_ROOM),
+            entry("/removeUser", ChatCommands.REMOVE_ROOM),
+            entry("/deleteRoom", ChatCommands.DELETE_ROOM),
+            entry("/joinRoom", ChatCommands.JOIN_ROOM),
+            entry("/inviteToRoom", ChatCommands.INVITE_ROOM)
+    );
     private final ResidentDAO residentDAO;
     private final RoomService roomService;
     private final ResidentService residentService;

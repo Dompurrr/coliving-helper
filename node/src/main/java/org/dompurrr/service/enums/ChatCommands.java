@@ -24,7 +24,7 @@ public enum ChatCommands {
         return cmd;
     }
 
-    public boolean equals(String cmd){
+    public boolean cmdEquals(String cmd){
         return this.toString().equals(cmd);
     }
 }
