@@ -38,7 +38,7 @@ public class TgProcessingServiceImpl implements TgProcessingService {
         String text = update.getMessage().getText();
         Long chatId = update.getMessage().getChatId();
         log.info("User " + curUser.getResidentId() + " inputted:"+text);
-        if (ChatCommands.CANCEL.equals(text)){
+        if (ChatCommands.CANCEL.cmdEquals(text)){
             sendAnswer(mainService.stopOperation(curUser), chatId);
         }
         else switch (curUserState){
