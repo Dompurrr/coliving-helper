@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Added sonar">
+    <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Edited sonar">
+      <change afterPath="$PROJECT_DIR$/.github/labeler.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/labeler.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/sonar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/sonar.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +152,9 @@
       <workItem from="1675489119344" duration="2987000" />
       <workItem from="1675494384219" duration="5223000" />
       <workItem from="1675507951206" duration="10450000" />
-      <workItem from="1675534214288" duration="3419000" />
+      <workItem from="1675534214288" duration="4039000" />
+      <workItem from="1675539484525" duration="13000" />
+      <workItem from="1675618548413" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="Room system added">
       <created>1675517428723</created>
@@ -179,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675538573748</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edited sonar">
+      <created>1675538813332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675538813332</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +227,8 @@
     <MESSAGE value="trash removed" />
     <MESSAGE value="Added coverage action" />
     <MESSAGE value="Added sonar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sonar" />
+    <MESSAGE value="Edited sonar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited sonar" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
