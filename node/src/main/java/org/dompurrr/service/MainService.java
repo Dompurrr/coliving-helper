@@ -59,4 +59,11 @@ public interface MainService {
      * @return result
      */
     String roomJoinOperation(Resident resident);
+
+    /**
+     * Start multistep purchase creation
+     * @param resident
+     * @return result
+     */
+    String createPurchaseOperation(Resident resident);
 }

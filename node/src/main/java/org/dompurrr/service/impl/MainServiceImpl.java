@@ -2,10 +2,12 @@ package org.dompurrr.service.impl;
 
 import lombok.extern.log4j.Log4j;
 import org.dompurrr.dao.ResidentDAO;
+import org.dompurrr.dao.RoomDAO;
 import org.dompurrr.entities.Resident;
 import org.dompurrr.entities.Room;
 import org.dompurrr.entities.enums.UserState;
 import org.dompurrr.service.MainService;
+import org.dompurrr.service.PurchaseService;
 import org.dompurrr.service.ResidentService;
 import org.dompurrr.service.RoomService;
 import org.dompurrr.service.enums.ChatCommands;
@@ -33,16 +35,22 @@ public class MainServiceImpl  implements MainService {
             entry("/removeUser", ChatCommands.REMOVE_ROOM),
             entry("/deleteRoom", ChatCommands.DELETE_ROOM),
             entry("/joinRoom", ChatCommands.JOIN_ROOM),
-            entry("/inviteToRoom", ChatCommands.INVITE_ROOM)
+            entry("/inviteToRoom", ChatCommands.INVITE_ROOM),
+            entry("/createPurchase", ChatCommands.CREATE_PURCHASE),
+            entry("/getPurchases", ChatCommands.GET_PURCHASES)
     );
     private final ResidentDAO residentDAO;
+    private final RoomDAO roomDAO;
     private final RoomService roomService;
     private final ResidentService residentService;
+    private final PurchaseService purchaseService;
 
-    public MainServiceImpl(ResidentDAO residentDAO, RoomService roomService, ResidentService residentService) {
+    public MainServiceImpl(ResidentDAO residentDAO, RoomDAO roomDAO, RoomService roomService, ResidentService residentService, PurchaseService purchaseService) {
         this.residentDAO = residentDAO;
+        this.roomDAO = roomDAO;
         this.roomService = roomService;
         this.residentService = residentService;
+        this.purchaseService = purchaseService;
     }
 
     @Override
@@ -80,6 +88,10 @@ public class MainServiceImpl  implements MainService {
                 return roomInviteOperation(resident);
             case JOIN_ROOM:
                 return roomJoinOperation(resident);
+            case CREATE_PURCHASE:
+                return createPurchaseOperation(resident);
+            case GET_PURCHASES:
+                return purchaseService.getPurchases(resident.getRoom());
             default:
                 log.error("Received unsupported command that is in commandMap");
                 break;
@@ -111,15 +123,15 @@ public class MainServiceImpl  implements MainService {
     @Override
     public String roomAddOperation(Resident resident) {
         if (residentService.hasRoom(resident)) {
-            Room userRoom = resident.getRoom();
-            if (userRoom.getResidentList().size()>=20){
+            Room updatedRoom = roomDAO.findRoomWithResidentsByRoomId(resident.getRoom().getRoomId());
+            if (updatedRoom.getResidentList().size()>=20){
                 return ErrorTemplates.MAX_RESIDENTS_NUM;
             }
             else {
                 log.debug("User " + resident.getResidentId() + " started user add");
                 resident.setUserState(UserState.ADDING_USER);
                 residentDAO.save(resident);
-                return ("Введите ник пользователя для добавления в комнату " + userRoom.getRoomName());
+                return ("Введите ник пользователя для добавления в комнату " + updatedRoom.getRoomName());
             }
         }
         else{
@@ -178,6 +190,24 @@ public class MainServiceImpl  implements MainService {
         else {
             log.debug("User " + resident.getRoom().getRoomId() + " attempted to join with room");
             return ErrorTemplates.HAS_ROOM;
+        }
+    }
+
+    @Override
+    public String createPurchaseOperation(Resident resident) {
+        if (resident == null){
+            log.debug("Provided null resident");
+            return ErrorTemplates.UNDEFINED_PROBLEM;
+        }
+        if (resident.getRoom() == null){
+            log.debug("Attempt to create purchase without room");
+            return ErrorTemplates.NO_ROOM;
+        }
+        else {
+            log.info("User " + resident.getResidentId() + " started purchase creation");
+            resident.setUserState(UserState.CREATING_PURCHASE);
+            residentDAO.save(resident);
+            return AnswerTemplates.PURCHASE_CREATION;
         }
     }
 }

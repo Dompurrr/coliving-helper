@@ -17,13 +17,15 @@ public class TgProcessingServiceImpl implements TgProcessingService {
     private final ProducerService producerService;
     private final ResidentService residentService;
     private final RoomService roomService;
+    private final PurchaseService purchaseService;
 
     public TgProcessingServiceImpl(MainService mainService, ProducerService producerService,
-                                   ResidentService residentService, RoomService roomService) {
+                                   ResidentService residentService, RoomService roomService, PurchaseService purchaseService) {
         this.mainService = mainService;
         this.producerService = producerService;
         this.residentService = residentService;
         this.roomService = roomService;
+        this.purchaseService = purchaseService;
     }
 
     /**
@@ -67,6 +69,12 @@ public class TgProcessingServiceImpl implements TgProcessingService {
                 break;
             case JOINS_THE_ROOM:
                 sendAnswer(residentService.joinRoom(curUser, text), chatId);
+                break;
+            case CREATING_PURCHASE:
+                sendAnswer(purchaseService.createPurchase(curUser, text), chatId);
+                break;
+            case ADDING_PURCHASE:
+                sendAnswer(purchaseService.addUserPurchase(curUser, text), chatId);
                 break;
             default:
                 log.error("Got incorrect user "+curUser.getResidentId() + " state " + curUser.getUserState().name());
