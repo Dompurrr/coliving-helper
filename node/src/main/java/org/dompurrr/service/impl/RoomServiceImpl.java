@@ -40,7 +40,7 @@ public class RoomServiceImpl implements RoomService {
             resident.setUserState(UserState.WAIT_FOR_COMMAND);
             resident.setStatus(AccountStatus.ONLY_TG);
             residentDAO.save(resident);
-            log.info("Successful room" + newRoom.getRoomId() + "creation, creator " + resident.getResidentId());
+            log.info("Successful room " + newRoom.getRoomId() + " creation, creator " + resident.getResidentId());
             return getRoomInfo(newRoom);
         }
         else{
@@ -63,12 +63,17 @@ public class RoomServiceImpl implements RoomService {
             log.error("Provided null room");
             return ErrorTemplates.UNDEFINED_PROBLEM;
         }
-        List<Resident> resList = room.getResidentList();
-        StringBuilder res = new StringBuilder("Название комнаты: " + room.getRoomName() + "\n");
+        Room updatedRoom = roomDAO.findByRoomId(room.getRoomId());
+        if (updatedRoom == null){
+            log.error("Provided room removed from database");
+            return ErrorTemplates.UNDEFINED_PROBLEM;
+        }
+        List<Resident> resList = updatedRoom.getResidentList();
+        StringBuilder res = new StringBuilder("Название комнаты: " + updatedRoom.getRoomName() + "\n");
         res.append("Количество участников: ").append(resList.size()).append("\n");
-        for (int i=0; i<resList.size();i++)
-            res.append("    Участник №").append(i + 1).append(": ").append(resList.get(i).getResidentName()).append("\n");
-        res.append("Токен комнаты для подключения: ").append(room.getToken()).append("\n");
+        for (Resident curRes: resList)
+            res.append("    Участник №").append(curRes.getResidentId()).append(": ").append(curRes.getResidentName()).append("\n");
+        res.append("Токен комнаты для подключения: ").append(hasToken(updatedRoom)?updatedRoom.getToken():"Отсутствует").append("\n");
         return res.toString();
     }
 
@@ -141,8 +146,13 @@ public class RoomServiceImpl implements RoomService {
             log.error("Provided null room");
             return ErrorTemplates.UNDEFINED_PROBLEM;
         }
+        Room updatedRoom = roomDAO.findRoomWithResidentsByRoomId(room.getRoomId());
+        if (updatedRoom == null){
+            log.error("Provided room isn't find in table, but it should");
+            return ErrorTemplates.UNDEFINED_PROBLEM;
+        }
         StringBuilder ans = new StringBuilder();
-        for (Resident tmp: room.getResidentList()){
+        for (Resident tmp: updatedRoom.getResidentList()){
             ans.append(tmp.getResidentId()).append(": ").append(tmp.getResidentName()).append("\n");
         }
         return ans.toString();
@@ -185,5 +195,10 @@ public class RoomServiceImpl implements RoomService {
             }
         }
         log.error("Attempt to remove vacant from non vacant room");
+    }
+
+    @Override
+    public boolean hasToken(Room room) {
+        return room.getToken() != null;
     }
 }

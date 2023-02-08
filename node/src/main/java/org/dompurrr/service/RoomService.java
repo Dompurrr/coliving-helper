@@ -47,4 +47,6 @@ public interface RoomService {
     boolean hasVacant(Room room);
 
     void dropVacant(Room room);
+
+    boolean hasToken(Room room);
 }

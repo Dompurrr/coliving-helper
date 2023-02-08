@@ -5,8 +5,6 @@ import org.dompurrr.entities.enums.AccountStatus;
 import org.dompurrr.entities.enums.UserState;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Setter
 @Getter
@@ -19,7 +17,6 @@ import java.util.List;
 public class Resident {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "resident_id")
     private Long residentId;
     @Column(name = "resident_name")
     private String residentName;
@@ -32,10 +29,6 @@ public class Resident {
     private Long tgPageRef;
     @Column(name = "ref_token")
     private String refToken;
-    @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Duty> duties = new ArrayList<>();
-    @OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Purchase> purchases = new ArrayList<>();
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
     @Enumerated(EnumType.STRING)

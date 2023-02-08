@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Setter
 @Getter
@@ -16,16 +17,17 @@ import java.time.LocalDateTime;
 public class Duty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "duty_id")
     private Long dutyId;
     @Column(name = "duty_name")
     private String dutyName;
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
-    @ManyToOne
-    @JoinColumn(name = "resident_id")
-    private Resident worker;
+    @ManyToMany
+    @JoinTable(name = "duty_worker",
+            joinColumns = @JoinColumn(name = "duty_id"),
+            inverseJoinColumns = @JoinColumn(name = "worker_id"))
+    private List<Resident> workers;
     @Column(name = "notification_date")
     private LocalDateTime notificationDate;
     @Column(name = "deadline_date")

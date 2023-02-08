@@ -7,7 +7,7 @@ import java.security.SecureRandom;
 @Component
 public class TextUtils {
     public boolean matchName(String name){
-        return (name.length() >= 2 && name.length() <= 20) && (name.matches("[A-Za-zА-Яа-я.]+"));
+        return (name.length() >= 2 && name.length() <= 20) && (name.matches("[A-Za-zА-Яа-яЁё.]+"));
     }
 
     public boolean matchRoomName(String name){
@@ -39,5 +39,20 @@ public class TextUtils {
         for (int i=0; i<16; i++)
             buf[i] = symbols.charAt((new SecureRandom()).nextInt(symbols.length()));
         return new String(buf);
+    }
+
+    public String[] purchaseDestructor(String inp){
+        String[] tmp = inp.split(" ");
+        return tmp.length == 2 && (matchNum(tmp[1])) && (matchRoomName(tmp[0])) ? tmp : null;
+    }
+
+    public String[] addPurchaseDestructor(String inp){
+        String[] tmp = inp.split(", ");
+        if (tmp.length < 1 || tmp.length > 20)
+            return null;
+        for (String s : tmp)
+            if (!matchNum(s))
+                return null;
+        return tmp;
     }
 }
