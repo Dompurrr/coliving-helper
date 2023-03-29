@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static org.dompurrr.RabbitQueues.*;
-
 
 @Component
 @Log4j
@@ -60,7 +58,7 @@ public class UpdateController {
     }
 
     private void produceText(Update update){
-        updateProducer.produce(TG_TEXT_MESSAGE_UPDATE, update);
+        updateProducer.produce("telegram_text_result", update);
     }
 
     public void setView(SendMessage sendMessage){

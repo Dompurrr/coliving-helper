@@ -24,4 +24,10 @@ public class AnswerTemplates {
             "В виде:\n" +
             "id токен";
     public static final String SUCCESS_JOIN = "Вы успешно вошли в комнату!";
+    public static final String PURCHASE_CREATION = "Добавление покупки.\n" +
+            "Введите название покупки и сумму.\n" +
+            "В виде:\n" +
+            "название сумма";
+    public static final String PURCHASE_LIST_SUCCESS = "Участники успешно добавлены к покупке.";
+
 }

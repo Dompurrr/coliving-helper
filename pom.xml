@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>tg-dispatcher</module>
-        <module>rabbitmq-queues</module>
         <module>node</module>
     </modules>
 

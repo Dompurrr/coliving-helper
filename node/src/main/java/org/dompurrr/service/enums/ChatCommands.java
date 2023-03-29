@@ -12,7 +12,11 @@ public enum ChatCommands {
     REMOVE_ROOM("/removeUser"),
     DELETE_ROOM("/deleteRoom"),
     JOIN_ROOM("/joinRoom"),
-    INVITE_ROOM("/inviteToRoom");
+    INVITE_ROOM("/inviteToRoom"),
+    PURCHASE_CREATE("/createPurchase"),
+    PURCHASE_GET("/getPurchases"),
+    PURCHASE_DELETE("/removePurchase"),
+    PURCHASE_PAY("/payPurchase");
     private final String cmd;
 
     ChatCommands(String cmd){

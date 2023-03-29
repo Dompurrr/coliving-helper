@@ -26,4 +26,16 @@ public class ErrorTemplates {
     public static final String BAD_DATA = "Введенные данные имеют неверный формат, попробуйте еще раз.";
     public static final String ROOM_NOT_FOUND = "Комната с данным id не найдена или токен не верный.";
     public static final String ROOM_IS_FULL = "Комната заполнена, попросите участника добавить нового сожителя.";
+    public static final String BAD_PURCHASE_NAME = "Неверно задана покупка.\n" +
+            "Входная строка должна быть из 2 частей разделенных пробелом\n" +
+            "Первая - название покупки в виде строки размером от 2 до 20 элементов из латинских и кириллических символов\n" +
+            "Вторая - сумма покупки, максимальное значени 999999.";
+    public static final String BAD_PURCHASE_LIST = "Неверный ввод списка участников покупки.\n" +
+            "Необходимо перечислить числа через запятую с пробелом.\n" +
+            "Пример:\n" +
+            "1, 4, 6";
+    public static final String BAD_PURCHASE_LIST_ID = "В списке один из id неверный или не проживает в вашей комнате.";
+
+    public static final String BAD_PURCHASE_ID = "Введен неверный id покупки.\n" +
+            "Возможно у вас нет доступа к данной покупке";
 }

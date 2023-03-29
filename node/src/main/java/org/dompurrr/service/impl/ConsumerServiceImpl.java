@@ -7,8 +7,6 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static org.dompurrr.RabbitQueues.*;
-
 @Log4j
 @Component
 public class ConsumerServiceImpl implements ConsumerService {
@@ -19,7 +17,7 @@ public class ConsumerServiceImpl implements ConsumerService {
     }
 
     @Override
-    @RabbitListener(queues = TG_TEXT_MESSAGE_UPDATE)
+    @RabbitListener(queues = "telegram_text_result")
     public void consumeTgTextMessage(Update update) {
         log.debug("NODE: New message is received");
         tgProcessingService.processTgTextMessage(update);
