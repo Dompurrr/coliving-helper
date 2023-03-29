@@ -70,11 +70,14 @@ public class TgProcessingServiceImpl implements TgProcessingService {
             case JOINS_THE_ROOM:
                 sendAnswer(residentService.joinRoom(curUser, text), chatId);
                 break;
-            case CREATING_PURCHASE:
+            case PURCHASE_CREATION:
                 sendAnswer(purchaseService.createPurchase(curUser, text), chatId);
                 break;
-            case ADDING_PURCHASE:
+            case PURCHASE_USER_ADD:
                 sendAnswer(purchaseService.addUserPurchase(curUser, text), chatId);
+                break;
+            case PURCHASE_DELETE:
+                sendAnswer(purchaseService.deletePurchase(curUser, text), chatId);
                 break;
             default:
                 log.error("Got incorrect user "+curUser.getResidentId() + " state " + curUser.getUserState().name());

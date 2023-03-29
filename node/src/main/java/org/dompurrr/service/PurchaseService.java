@@ -13,4 +13,6 @@ public interface PurchaseService {
     String getPurchases(Room room);
 
     String getPurchaseResidents(Purchase purchase);
+
+    String deletePurchase(Resident resident, String purchaseId);
 }

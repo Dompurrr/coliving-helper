@@ -1,6 +1,7 @@
 package org.dompurrr.service.impl;
 
 import lombok.extern.log4j.Log4j;
+import org.apache.commons.lang.math.NumberUtils;
 import org.dompurrr.dao.PurchaseDAO;
 import org.dompurrr.dao.ResidentDAO;
 import org.dompurrr.dao.RoomDAO;
@@ -14,6 +15,7 @@ import org.dompurrr.utils.AnswerTemplates;
 import org.dompurrr.utils.ErrorTemplates;
 import org.dompurrr.utils.TextUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +49,7 @@ public class PurchaseServiceImpl implements PurchaseService {
             newPurchase.setBuyer(resident);
             newPurchase.setRoom(room);
             purchaseDAO.save(newPurchase);
-            resident.setUserState(UserState.ADDING_PURCHASE);
+            resident.setUserState(UserState.PURCHASE_USER_ADD);
             residentDAO.save(resident);
             return ("Покупка создана. Перечислите тех кто скидывается на покупку.\n" +
                     "В формате набора чисел через запятую с пробелом.\n"+
@@ -94,7 +96,7 @@ public class PurchaseServiceImpl implements PurchaseService {
             StringBuilder res = new StringBuilder();
             for (Purchase curPurchase: updatedRoom.getPurchases()){
                 Purchase updatedPurchase = purchaseDAO.findPurchaseWithBuyerByPurchaseId(curPurchase.getPurchaseId());
-                res.append(updatedPurchase.getPurchaseName()).append("\n").append("   на сумму ").append(updatedPurchase.getSum()).append("\n").append("   покупатель ").append(updatedPurchase.getBuyer().getResidentName()).append("\n").append("   скидывались: ").append(getPurchaseResidents(updatedPurchase)).append("\n");
+                res.append(updatedPurchase.getPurchaseId()).append(")").append(updatedPurchase.getPurchaseName()).append("\n").append("   на сумму: ").append(updatedPurchase.getSum()).append("\n").append("   покупатель: ").append(updatedPurchase.getBuyer().getResidentName()).append("\n").append("   скидывались: ").append(getPurchaseResidents(updatedPurchase)).append("\n");
             }
             return res.toString();
         }
@@ -109,5 +111,32 @@ public class PurchaseServiceImpl implements PurchaseService {
             res.append(curRes.getResidentName()).append(" ");
         }
         return res.toString();
+    }
+
+    @Override
+    @Transactional
+    public String deletePurchase(Resident resident, String textId) {
+        if (NumberUtils.isNumber(textId)){
+            Long purchaseId = Long.parseLong(textId);
+            Room room = roomDAO.findByRoomId(resident.getRoom().getRoomId());
+            if (room != null){
+                Purchase purchase = purchaseDAO.findByPurchaseId(purchaseId);
+                if (purchase != null){
+                    if (purchase.getBuyer().getResidentId().equals(resident.getResidentId())) {
+                        purchase.setRoom(null);
+                        purchase.setBuyer(null);
+                        purchase.setResidents(null);
+                        purchaseDAO.save(purchase);
+                        resident.setUserState(UserState.WAIT_FOR_COMMAND);
+                        residentDAO.save(resident);
+                        return "Покупка " + purchaseId + " удалена.";
+                    }
+                    else return ErrorTemplates.BAD_PURCHASE_ID;
+                }
+                else return ErrorTemplates.BAD_PURCHASE_ID;
+            }
+            else return ErrorTemplates.NO_ROOM;
+        }
+        else return ErrorTemplates.BAD_NUMBER;
     }
 }

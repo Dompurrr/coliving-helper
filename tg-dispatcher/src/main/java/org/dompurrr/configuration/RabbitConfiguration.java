@@ -6,8 +6,6 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static org.dompurrr.RabbitQueues.*;
-
 @Configuration
 public class RabbitConfiguration {
     @Bean
@@ -16,12 +14,12 @@ public class RabbitConfiguration {
     }
     @Bean
     public Queue tgTextMessageQueue(){
-        return new Queue(TG_TEXT_MESSAGE_UPDATE);
+        return new Queue("telegram_text_result");
     }
 
     @Bean
     public Queue tgAnswerMessageQueue(){
-        return new Queue(TG_ANSWER_MESSAGE);
+        return new Queue("telegram_answer_message");
     }
 
 }

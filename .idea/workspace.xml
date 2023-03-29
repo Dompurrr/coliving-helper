@@ -4,31 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Added purchase add,get">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/PurchaseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/PurchaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/PurchaseServiceImpl.java" afterDir="false" />
+    <list default="true" id="75641cfb-2132-41de-8823-81985d4fb776" name="Changes" comment="Purchase remove added">
       <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg-dispatcher/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/dao/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Duty.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Duty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Purchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Resident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/UserState.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/entities/enums/UserState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/PurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/enums/ChatCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/enums/ChatCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ConsumerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/RoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/ProducerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/PurchaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/PurchaseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/TgProcessingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/TgProcessingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/AnswerTemplates.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/AnswerTemplates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/ErrorTemplates.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/ErrorTemplates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/TextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/org/dompurrr/utils/TextUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/Че делать то.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-queues/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-queues/src/main/java/org/dompurrr/RabbitQueues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg-dispatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tg-dispatcher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/configuration/RabbitConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/controllers/UpdateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/AnswerConsumerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tg-dispatcher/src/main/java/org/dompurrr/service/impl/AnswerConsumerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,22 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b72beb77-6d8f-4097-983b-2000a859eec7" />
+        <option name="url" value="git@github.com:Dompurrr/coliving-helper.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tg-dispatcher/Dockerfile" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -94,6 +110,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;ee660709a5697c2edb1fd152766b2a07&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -137,10 +154,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tg-dispatcher/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="maven3-amazoncorretto-11_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="tg-dispatcher/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tg-dispatcher/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="tg-dispatcher/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.tg-dispatcher/Dockerfile" />
+      <item itemvalue="Docker.tg-dispatcher/Dockerfile build" />
       <item itemvalue="Spring Boot.TelegramDispatcherApplication" />
       <item itemvalue="Spring Boot.NodeApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.tg-dispatcher/Dockerfile" />
+        <item itemvalue="Docker.tg-dispatcher/Dockerfile build" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,6 +234,18 @@
       <workItem from="1675663532203" duration="14022000" />
       <workItem from="1675698096934" duration="61000" />
       <workItem from="1675711475782" duration="1711000" />
+      <workItem from="1679300452597" duration="75000" />
+      <workItem from="1679344098229" duration="1960000" />
+      <workItem from="1679396199339" duration="1616000" />
+      <workItem from="1679403949701" duration="352000" />
+      <workItem from="1679404842366" duration="584000" />
+      <workItem from="1679422743921" duration="6264000" />
+      <workItem from="1679432195848" duration="408000" />
+      <workItem from="1679503180430" duration="3069000" />
+      <workItem from="1679563479162" duration="560000" />
+      <workItem from="1679687804710" duration="12000" />
+      <workItem from="1679914886733" duration="2920000" />
+      <workItem from="1680110280306" duration="5743000" />
     </task>
     <task id="LOCAL-00001" summary="Room system added">
       <created>1675517428723</created>
@@ -245,7 +313,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="devAndTest" />
+                        <option value="origin/developmentBranch" />
                       </list>
                     </value>
                   </entry>
@@ -268,7 +336,8 @@
     <MESSAGE value="Added docker build workflow" />
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Added purchase add,get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added purchase add,get" />
+    <MESSAGE value="Purchase remove added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Purchase remove added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,16 +349,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/TgProcessingServiceImpl.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/node/src/main/java/org/dompurrr/service/impl/PurchaseServiceImpl.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="11" />
+          <line>79</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

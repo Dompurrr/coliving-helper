@@ -34,5 +34,8 @@ public class ErrorTemplates {
             "Необходимо перечислить числа через запятую с пробелом.\n" +
             "Пример:\n" +
             "1, 4, 6";
-    public static final String BAD_PURCHASE_LIST_ID = "В списке один из id не верный или не проживает в вашей комнате.";
+    public static final String BAD_PURCHASE_LIST_ID = "В списке один из id неверный или не проживает в вашей комнате.";
+
+    public static final String BAD_PURCHASE_ID = "Введен неверный id покупки.\n" +
+            "Возможно у вас нет доступа к данной покупке";
 }

@@ -36,8 +36,10 @@ public class MainServiceImpl  implements MainService {
             entry("/deleteRoom", ChatCommands.DELETE_ROOM),
             entry("/joinRoom", ChatCommands.JOIN_ROOM),
             entry("/inviteToRoom", ChatCommands.INVITE_ROOM),
-            entry("/createPurchase", ChatCommands.CREATE_PURCHASE),
-            entry("/getPurchases", ChatCommands.GET_PURCHASES)
+            entry("/createPurchase", ChatCommands.PURCHASE_CREATE),
+            entry("/getPurchases", ChatCommands.PURCHASE_GET),
+            entry("/removePurchase", ChatCommands.PURCHASE_DELETE),
+            entry("/payPurchase", ChatCommands.PURCHASE_PAY)
     );
     private final ResidentDAO residentDAO;
     private final RoomDAO roomDAO;
@@ -88,10 +90,14 @@ public class MainServiceImpl  implements MainService {
                 return roomInviteOperation(resident);
             case JOIN_ROOM:
                 return roomJoinOperation(resident);
-            case CREATE_PURCHASE:
+            case PURCHASE_CREATE:
                 return createPurchaseOperation(resident);
-            case GET_PURCHASES:
+            case PURCHASE_GET:
                 return purchaseService.getPurchases(resident.getRoom());
+            case PURCHASE_DELETE:
+                return deletePurchaseOperation(resident);
+            case PURCHASE_PAY:
+                //return purchaseService.getPurchases(resident.getRoom());
             default:
                 log.error("Received unsupported command that is in commandMap");
                 break;
@@ -205,9 +211,26 @@ public class MainServiceImpl  implements MainService {
         }
         else {
             log.info("User " + resident.getResidentId() + " started purchase creation");
-            resident.setUserState(UserState.CREATING_PURCHASE);
+            resident.setUserState(UserState.PURCHASE_CREATION);
             residentDAO.save(resident);
             return AnswerTemplates.PURCHASE_CREATION;
+        }
+    }
+
+    @Override
+    public String deletePurchaseOperation(Resident resident){
+        if (resident == null){
+            log.debug("Provided null resident");
+            return ErrorTemplates.UNDEFINED_PROBLEM;
+        }
+        else {
+            log.info("User " + resident.getResidentId() + " started purchase deletion");
+            resident.setUserState(UserState.PURCHASE_DELETE);
+            residentDAO.save(resident);
+
+            String res = new String();
+            res = "Выберите покупку на удаление:\n\n" + purchaseService.getPurchases(resident.getRoom());
+            return res.toString();
         }
     }
 }

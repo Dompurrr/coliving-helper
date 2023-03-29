@@ -66,4 +66,9 @@ public interface MainService {
      * @return result
      */
     String createPurchaseOperation(Resident resident);
+
+    /**
+     *
+     */
+    String deletePurchaseOperation(Resident resident);
 }
